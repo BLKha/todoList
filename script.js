@@ -53,22 +53,32 @@ addBox.onclick=()=>{
 
         let newLiTag= "";
         listArr.forEach((element, index) => {
-            newLiTag += `<div class="content"><li>
-            ${index+1}.
+            newLiTag += `<div class="content"><li contenteditable="true" ">
+            ${index+1}. 
             ${element}</li><span class="icon"  data-index="${index}"> <i class="fas fa-trash"></i>
             <span class="remove-text">xóa</span>
             </span></div>`;
         });
-
+//onblur="editTask(${index},this.innerText)
         todoList.innerHTML = newLiTag;
         inputBox.value="";
+        document.querySelectorAll('.content li').forEach((item, index)=>{
+            item.addEventListener('blur',function(){
+                editTask(index,item.innerText)
+            });
+        });
 
         document.querySelectorAll('.icon').forEach(item =>{
             item.addEventListener('click',function(){
                 deleteTask(item.getAttribute('data-index'))
-            })
-        })
+            });
+        });
+}
 
+function editTask(index, newValue){
+    listArr[index]= newValue;
+    localStorage.setItem("New todo",JSON.stringify(listArr));
+    showTasks();
 }
 
 function deleteTask(index){
@@ -90,6 +100,8 @@ inputBox.addEventListener('keydown', function(event){
         addBox.onclick();
     }
 })
+
 showTasks();
+
 
 
