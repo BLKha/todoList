@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100&family=Roboto:wght@300;400;500;700&display=swap');
+:root{
+    --primary-color: rgb(23, 131, 218);
+    --background-color: #000e7a;
+    --text-color:  #fbff00;
+    --content-color:#ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(165, 244, 255);
+}
+.wrapper{
+    width: 100%;
+    height: 100%px;
+    min-height: 500px;
+    max-width: 450px;
+    margin: 100px auto;
+    background-color: rgb(23, 131, 218);
+    padding: 25px;
+    border-radius: 25px;
+    
+}
+.wrapper header{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.wrapper .inputFiled{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    margin: 20px 0;
+}
+.inputFiled input{
+    width: 85%;
+    height: 100%;
+    font-size: 17px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--background-color);
+    padding-left: 15px;
+}
+.inputFiled button{
+    width: 15%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-left: 3px;
+    background:var(--background-color);
+    font-size: 20px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.5;
+    color:  var(--text-color);
+}
+.inputFiled button.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.wrapper h4{
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7); 
+}
+.wrapper .todoList{
+    overflow-y: auto;
+    max-height: 400px;
+    scrollbar-width: none;
+    
+}
+.todoList li{
+    position: relative;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: auto;
+    min-height: 60px;
+    line-height: 25px;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding:17px 20px;
+    margin:7px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: default;
+    overflow: visible;
+    overflow-x: hidden;
+    /* scrollbar-width: thin; */
+
+}
+
+.todoList .content:hover .icon{
+  display: block;
+}
+.content .icon:hover i{
+    font-size: 11pt;
+}
+.content .icon:hover .remove-text{
+    font-size: 13pt;
+}
+.todoList .content{
+    display: flex;
+    align-items: center;
+}
+
+.content .icon{
+    position: relative;
+    font-size: 12pt;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2.5px solid var(--text-color);
+    background: var(--background-color);
+    display: none;
+    cursor: pointer;
+}
+.content .icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 5px;
+
+}
+.content .icon .remove-text{
+    display:block;
+    font-size: 8pt;
+    padding-top: 3px;
+    text-align: center;
+    color: rgb(150, 0, 0);
+    
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+.footer span{
+    font-size: 18px;
+    color:  rgba(255, 255, 255, 0.7);
+}
+.footer button{
+    font-size: 16px;
+    padding: 5px 7px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--text-color);
+    color: var(--background-color);
+    pointer-events: none;
+    opacity: 0.5;
+}
+.footer button.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.footer .pendingTask{
+    color: var(--text-color);
+    font-size: 16pt;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    padding: 0 3px;
+}
+
