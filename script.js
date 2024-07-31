@@ -53,8 +53,7 @@ addBox.onclick=()=>{
 
         let newLiTag= "";
         listArr.forEach((element, index) => {
-            newLiTag += `<div class="content"><li contenteditable="true" ">
-            ${index+1}. 
+            newLiTag += `<div class="content"><span class="number">${index+1}</span><li contenteditable="true" ">
             ${element}</li><span class="icon"  data-index="${index}"> <i class="fas fa-trash"></i>
             <span class="remove-text">xóa</span>
             </span></div>`;

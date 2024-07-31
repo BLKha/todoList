@@ -84,7 +84,7 @@ body{
     list-style: none;
     align-items: center;
     justify-content: center;
-    width: 340px;
+    width: 330px;
     height: auto;
     min-height: 60px;
     line-height: 25px;
@@ -113,6 +113,22 @@ body{
 .todoList .content{
     display: flex;
     align-items: center;
+}
+.content .number{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:-65px;
+    transform: translateX(20px);
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--background-color);
+    color: var(--background-color);
+    background-color:var(--text-color);
+    z-index: 999;
 }
 
 .content .icon{
